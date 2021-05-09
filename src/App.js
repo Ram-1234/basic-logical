@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Array1 from './Question1/Array';
 import Array2 from './Question2/Array';
 import Array3 from './Question3/Array';
-//import Apps from './Question5/Apps';
+import Apps from './Question5/Apps';
 import APID from './Question4/Api';
 
 
@@ -25,7 +25,8 @@ let App=()=>{
       .then(jes=>jes.json())
       .then(data=>setApi(data))
     },[]);
-    //console.log(apidata);
+    
+    console.log(apidata);
     const data4=apidata.map((val)=> <APID key={val.id} name={val.name} username={val.username} email={val.email} />)
 
     return (
@@ -40,7 +41,7 @@ let App=()=>{
       <p><strong>Note:</strong> I have used placeholder api,your provided api is not accessible from my end.</p>
        {data4}
        <h2>Answer-5</h2>
-       {/* <Apps />  */}
+       <Apps /> 
         </>
     )
 }

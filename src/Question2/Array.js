@@ -4,7 +4,7 @@ export default function Array() {
  
 const [datavalue,setData]=useState();
 
-var arr=[0,0,1,1,0,0,0,1,0,0,1,1,1,0];
+const arr=[0,0,1,1,0,0,0,1,0,0,1,1,1,0];
 
 useEffect(()=>{
     let max=0;
@@ -20,7 +20,7 @@ useEffect(()=>{
         }
     }
     setData(max);
-},[datavalue]);
+},[arr]);
 
 
     return (
